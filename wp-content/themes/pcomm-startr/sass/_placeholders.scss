@@ -1,0 +1,40 @@
+/**
+ * Clearfix placeholder
+ */
+%clearfix {
+	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+	&:before, &:after {
+		content: "";
+    	display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+%robot_thin {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-weight: 100;
+}
+
+%robot_light {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+%robot_reg {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+%robot_bold {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-weight: 500;
+}
+
+%robot_black {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-weight: 700;
+}

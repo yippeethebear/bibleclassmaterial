@@ -1,0 +1,127 @@
+* {
+	@include border-box-sizing;
+}
+
+body 
+{
+	@extend %robot_reg;
+	font-size: 100%;
+	font-size-adjust:0.5; 
+	line-height: pem($base_grid, $base_font);
+}
+
+/******************************************************************
+** GLOBAL TYPOGRAPHY STYLES
+******************************************************************/
+p, ol, ul
+{
+	font-size: pem($body_copy);
+	margin:0;
+	margin-bottom: pem($base_grid, $body_copy);
+	line-height: pem($base_grid, $body_copy);
+}
+ol {
+	list-style-type: decimal;
+}
+
+ul {
+	margin-left: 1.5em;
+	padding: 0;
+}
+
+/******************************************************************
+** GLOBAL STYLES FOR LINKS AND HEADINGS
+******************************************************************/
+
+a, a:visited {
+	color: #004288;
+	text-decoration: none;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+a:hover, a:focus {
+	color: #004990;
+	text-decoration: underline;
+}
+a:link { -webkit-tap-highlight-color : rgba(0,0,0,0); /* this highlights links on iPhones / iPads */ }
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, h2, h3, h4, h5 { 
+	font-family: "Univers LT W01 65 Bold", "Helvetica Neue", Helvetica, Verdana, sans-serif;
+	padding: 0;
+	font-weight: normal;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a { 
+	text-decoration: none; 
+}
+h1 { 
+	
+
+	font-size: pem($h1);
+	margin: pem(24, $h1) 0 pem($base_grid, $h1);
+	line-height: pem(72, $h1);
+ 
+}
+h2 { 
+	font-size: pem($h2);
+	margin: pem(12, $h2) 0 pem(12, $h2);
+	line-height: pem(48, $h2);
+}
+h3 { 
+	font-size: pem($h3);
+	margin: pem(18, $h3) 0 pem(6, $h3);
+	line-height: pem(42, $h3);
+}
+h4 { 
+	font-size: pem($h4);
+	margin: 0;
+	line-height: pem(24, $h4);
+}
+h5 { 
+	font-size: pem($h5);
+	margin: 0;
+	line-height: pem($base_grid, $h5);
+}
+
+/* **********************************************************************
+   USEFUL TOOLS
+********************************************************************** */
+/* image replacement technique to hide text on an element with a background image */
+/* http://nicolasgallagher.com/another-css-image-replacement-technique/ */
+.ir {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    &:hover,
+    &:active,
+    &:focus {
+    	background-color: #f1f1f1;
+	    border-radius: 3px;
+	    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	    clip: auto !important;
+	    color: #21759b;
+	    display: block;
+	    font-size: 14px;
+	    font-weight: bold;
+	    height: auto;
+	    left: 5px;
+	    line-height: normal;
+	    padding: 15px 23px 14px;
+	    text-decoration: none;
+	    top: 5px;
+	    width: auto;
+	    z-index: 100000; /* Above WP toolbar */
+    }    
+}

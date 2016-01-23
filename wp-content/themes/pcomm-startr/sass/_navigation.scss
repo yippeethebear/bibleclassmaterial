@@ -1,0 +1,190 @@
+/******************************************************************
+** NAVIGATION
+******************************************************************/
+
+a.menu-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 200;
+}
+a.menu-link:hover {
+	text-decoration: none;
+}
+
+nav[role="navigation"] ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+nav[role="navigation"], nav[role="navigation"] > ul ul {
+	clear: both;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.js nav[role="navigation"], .js nav[role="navigation"] > ul ul {
+	overflow: hidden;
+	max-height: 0;
+}
+.js nav[role="navigation"] > ul ul {
+	padding: 0 0 0 10px;
+}
+nav[role="navigation"].active, .js nav[role="navigation"] > ul ul.active {
+	max-height: 55em;
+}
+nav[role="navigation"] > ul {
+	border-top: 1px solid #ccc;
+}
+nav[role="navigation"] li a {
+	display: block;
+	padding: 0.8em;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+
+nav[role="navigation"] li.has-subnav > a:after {
+	content: '+';
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	font-size: 1.5em;
+	padding: 0.25em 0.5em;
+}
+nav[role="navigation"] li.has-subnav > a.active:after {
+	content: "-";
+}
+
+
+@media screen and (min-width: 600px) {
+
+	a.menu-link {
+	   display: none;
+	}
+	.js nav[role="navigation"], .js nav[role="navigation"] > ul ul {
+		clear: none;
+		max-height: none;
+		overflow: visible;
+		/*background: none;*/
+	}
+	.js nav[role="navigation"] > ul ul {
+		background: #ccc;
+		display: none;
+		padding: 0;
+	}
+	.js nav[role="navigation"] > ul li:hover > ul {
+		display: block;
+	}
+	nav[role="navigation"] ul {
+		margin: 0 0 0 -0.25em;
+		border: 0;
+	}
+	nav[role="navigation"] li a {
+		border: 0;
+	}
+	nav[role="navigation"] li.has-subnav > a {
+		padding-right: 2em;
+	}
+	nav[role="navigation"] li.has-subnav > a:after {
+		content: ">";
+		font-size: 1em;
+		padding: 0.8em 0.5em;
+	}
+	nav[role="navigation"] li.has-subnav > a.active:after,
+	nav[role="navigation"] ul > li.has-subnav > a:after {
+		content: "";
+	}
+	nav[role="navigation"] > ul li {
+		margin: 0 0.25em;
+	}
+	nav[role="navigation"] > ul > li {
+		display: inline-block;
+		position: relative;
+	}
+	nav[role="navigation"] > ul ul {
+		position: absolute;
+		top: 0;
+		left: 12em;
+		width: 12em;
+	}
+	nav[role="navigation"] > ul ul li {
+		position: relative;
+	}
+	nav[role="navigation"] > ul ul.sub-menu {
+		top: 2.6em;
+		left: 0;
+	}
+	nav[role="navigation"] > ul ul.sub-menu ul.sub-menu {
+		position: absolute;
+		top: 0;
+		left: 12.1em;
+	}
+}
+
+	.oldie a.menu-link {
+	   display: none;
+	}
+	.oldie.js nav[role="navigation"], 
+	.oldie.js nav[role="navigation"] > ul ul {
+		clear: none;
+		max-height: none;
+		overflow: visible;
+		/*background: none;*/
+	}
+	.oldie.js nav[role="navigation"] > ul ul {
+		background: #ccc;
+		display: none;
+		padding: 0;
+	}
+	.oldie.js nav[role="navigation"] > ul li:hover > ul {
+		display: block;
+	}
+	.oldie nav[role="navigation"] ul {
+		margin: 0 0 0 -0.25em;
+		border: 0;
+	}
+	.oldie nav[role="navigation"] li a {
+		border: 0;
+	}
+	.oldie nav[role="navigation"] li.has-subnav > a {
+		padding-right: 2em;
+	}
+	.oldie nav[role="navigation"] li.has-subnav > a:after {
+		content: ">";
+		font-size: 1em;
+		padding: 0.8em 0.5em;
+	}
+	.oldie nav[role="navigation"] li.has-subnav > a.active:after,
+	.oldie nav[role="navigation"] ul > li.has-subnav > a:after {
+		content: "";
+	}
+	.oldie nav[role="navigation"] > ul li {
+		margin: 0 0.25em;
+	}
+	.oldie nav[role="navigation"] > ul > li {
+		/* display: inline-block; */
+		float: left;
+		position: relative;
+	}
+	.oldie nav[role="navigation"] > ul ul {
+		position: absolute;
+		top: 0;
+		left: 12em;
+		width: 12em;
+	}
+	.oldie nav[role="navigation"] > ul ul li {
+		position: relative;
+	}
+	.oldie nav[role="navigation"] > ul ul.sub-menu {
+		top: 2.6em;
+		left: 0;
+	}
+	.oldie nav[role="navigation"] > ul ul.sub-menu ul.sub-menu {
+		position: absolute;
+		top: 0;
+		left: 12.1em;
+	}	
+	

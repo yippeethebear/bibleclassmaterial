@@ -1,0 +1,233 @@
+/*******************************************************************************
+ ** HEADER **
+ *******************************************************************************/
+body.home header[role="banner"] {
+	display: none;
+}
+
+header[role="banner"] {
+	text-align: center;
+	background-color: #000;
+	position: relative;
+	width: 100%;
+	height: 50px;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.logo {
+		font-size: 1.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0.5em 0;
+		@extend %robot_bold;
+		margin: 0;
+		padding-top: 10px;
+
+		body.home & {
+			display: none;
+		}
+	}
+
+}
+
+/*******************************************************************************
+ ** NAVIGATION **
+ *******************************************************************************/
+body.home nav[role="navigation"] {
+	background-color: rgba(0,0,0,0.6);
+	margin-top: 0;
+}
+
+.page-nav {
+	height: 60px;
+	z-index: 100;
+
+	.nav-wrap {
+		width: 100%;
+		margin: 0 auto;
+		background-color: #000;
+	}
+}
+
+
+nav[role="navigation"] {
+	text-align: center;
+	margin: 0 auto;
+	width: 976px;
+	z-index: 100;
+	position: relative;
+
+	ul {
+		float: none;
+		list-style-type: none;
+		margin: 0;
+		display: inline-block;
+		text-align: center;
+
+		li {
+			font-size: pem(16, $body_copy);
+			display: inline-block;
+			text-transform: uppercase;
+			margin: 0;
+			text-align: center;
+			@extend %robot_light;
+
+			a {
+				display: block;
+				padding: 18px 20px;
+				color: #fff;
+			}
+		} 
+	}
+}
+
+.nav-wrap.sticky {
+	position: fixed !important;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+
+	nav {
+		
+		-moz-transition: right 0.125s ease 0.25s, margin-right 0.125s ease 0.25s;
+		-webkit-transition: right 0.125s ease, margin-right 0.125s ease 0.25s;
+		-webkit-transition-delay: 0.25s;
+		transition: right 0.125s ease 0.25s, margin-right 0.125s ease 0.25s;
+	}
+}
+
+/*******************************************************************************
+ ** MAIN CONTENT **
+ *******************************************************************************/
+.wrapper {
+	background-color: #ddd;
+
+	.container {
+		background-color: #fff;
+	}
+}
+
+section[role="main"] {
+	padding: 1px;
+	background-color: #ddd;
+
+	.container {
+		background-color: #fff;
+	}
+
+	#archive-menu {
+		text-align: center;
+		#alphabet-menu {
+			list-style-type: none;
+			clear: both;
+			display: inline-block;
+
+			li {
+				display: inline-block;
+				font-size: 20px;
+				padding: 8px;
+			}
+		}
+	}
+
+	#searchform {
+		float: right;
+		margin-top: 50px;
+	}
+
+	.page-title {
+		width: 30%;
+		float: left;
+		@extend %robot_bold;
+	}
+}
+
+.index-contain {
+	background-image: url(images/Bible.jpg);
+	background-size: cover;
+	height: 700px;
+	position: relative;
+	color: #fff;
+
+	.headers {
+		margin-top: 240px;
+		position: absolute;
+		width: 600px;
+		left: 50%;
+		margin-left: -300px;
+
+		h1 {
+			margin: 0;
+			text-align: center;
+		}
+
+		h4 {
+			text-align: center;
+		}
+	}
+
+	.home-tiles {
+		position: absolute;
+		bottom: 50px;
+		width: 100%;
+		text-align: center;
+
+		ul {
+			display: inline-block;
+			margin: 0 auto;
+			list-style-type: none;
+
+			li {
+				display: table;
+				width: 170px;
+				margin: 20px 50px;
+				padding: 20px;
+				background-color: $oh_red;
+				min-height: 170px;
+				font-size: pem(24, $body_copy);
+				@extend %robot_light;
+				border-radius: 100px;
+				vertical-align: middle;
+				float: left;
+
+				a {
+					display: table-cell;
+					vertical-align: middle;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+a.catalog-link {
+	color: $oh_red;
+
+	.catalog-item {
+		@extend %robot_reg;
+		font-size: 18px;
+	}
+
+	&:hover {
+		color: #000;
+		text-decoration: underline;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+	}
+}
+
+.entry-content {
+	img {
+		float: left;
+	}
+}
+
+.faq-question {
+	font-size: 26px;
+}

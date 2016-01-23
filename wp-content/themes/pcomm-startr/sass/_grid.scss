@@ -1,0 +1,191 @@
+/*******************************************************************************
+ ** LAYOUT CONTAINERS **
+ *******************************************************************************/
+
+.container {
+  @include container;
+  @extend %clearfix;
+  //@include susy-grid-background;
+}
+
+/*******************************************************************************
+ ** COLUMN CLASSES **
+ *******************************************************************************/
+.col-1 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(1,12);
+	  @include nth-omega;
+	}
+}
+
+.col-2 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(2,12);
+	  @include nth-omega;
+	}
+}
+
+.col-3 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(3,12);
+	  @include nth-omega;
+	}
+}
+
+.col-4 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(4,12);
+	  @include nth-omega;
+	}
+}
+
+.col-5 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(5,12);
+	  @include nth-omega;
+	}
+}
+
+.col-6 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(6,12);
+	  @include nth-omega;
+	}
+}
+
+.col-7 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(7,12);
+	  @include nth-omega;
+	}
+}
+
+.col-8 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(8,12);
+	  @include nth-omega;
+	}
+}
+
+.col-9 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(9,12);
+	  @include nth-omega;
+	}
+}
+
+.col-10 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(10,12);
+	  @include nth-omega;
+	}
+}
+
+.col-11 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(11,12);
+	  @include nth-omega;
+	}
+}
+
+.col-12 {
+	@include span-columns(12 omega,12);
+
+	@include at-breakpoint($small_tablet) {
+	  @include span-columns(12,12);
+	  @include nth-omega;
+	}
+}
+
+.col-clear {
+	@extend %clearfix;
+}
+
+// same context grid in a 9 column container
+.inner-col-3 {
+	@include span-columns(9 omega,9);
+
+	@include at-breakpoint($small_tablet) {
+		@include span-columns(3, 9);
+		@include nth-omega;
+	}
+}
+
+// new context grid in 9 column container
+@include with-grid-settings(3, 14em, 1em, 0) {
+	.container-3 {
+		@include container;
+		@extend %clearfix;
+	}
+
+	.inner-col {
+		@include span-columns(3 omega, 3);
+
+		@include at-breakpoint($small_tablet) {
+			@include span-columns(1);
+			@include nth-omega;
+		}
+	}
+}
+
+@include with-grid-settings(5, 8em, 1em, 0) {
+	.container-5 {
+		@include container;
+		@extend %clearfix;
+	}
+
+	.inner-col-5 {
+		@include span-columns(5 omega, 5);
+
+		@include at-breakpoint($small_tablet) {
+			@include span-columns(1,5);
+			@include nth-omega;
+		}
+	}
+}
+
+@include with-grid-settings(4,10em,1.333em,0) {
+  .container-4 {
+  	@include span-columns(4 omega, 4);
+  }
+
+  .inner-col-4 {
+  	@include isolate-grid(4,4);
+
+  	@include at-breakpoint($small_tablet) {
+  	  @include isolate-grid(2,4);
+  	  .grid_tests & {
+  	  	margin-bottom: 1em;
+  	  }
+  	}
+
+  	@include at-breakpoint($tablet) {
+  	  @include isolate-grid(1,4);
+  	  .grid_tests & {
+  	  	margin-bottom: 0;
+  	  }
+  	}
+  }
+}

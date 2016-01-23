@@ -1,0 +1,23 @@
+/******************************************************************
+Theme Name: PComm SASS Startr
+Theme URI: http://www.partnercomm.net
+Description: Primary PComm responsive theme.
+Author: Chadwick Cole and Jason Crane
+Author URI: http://www.partnercomm.net
+Version: 0.1
+******************************************************************/
+
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "vars";
+@import "compass/utilities/general/clearfix";
+@import "mixins";
+@import "placeholders";
+@import "base";
+@import "grid";
+@import "normalize";
+@import "global";
+@import "forms";
+//@import "navigation";
+@import "design";

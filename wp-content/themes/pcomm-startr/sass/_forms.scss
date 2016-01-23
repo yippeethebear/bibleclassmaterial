@@ -1,0 +1,82 @@
+/* **********************************************************************
+** FORM STYLES
+********************************************************************** */
+
+/* styling for all text-like inputs, support for all browsers,
+could also do this, but not supported till IE9: input:not([type=submit]):not([type=file]) */
+input[type=text],
+input[type=search],
+input[type=url],
+input[type=tel],
+input[type=password],
+input[type=email],
+input[type=datetime],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=datetimelocal],
+input[type=number],
+input[type=color] {
+ 	border: 1px solid #c3c3c3;
+	/*border-top: 1px solid #7c7c7c;*/
+	padding: .7em;
+	font-size: 12px;
+ }
+form ul, form ol {
+ 	list-style-type:none;
+ 	margin: 0;
+ 	padding: 0;
+ }
+ form li {
+ 	margin: 0 0 1em;
+ }
+input[type=radio]:first-of-type {
+	margin-left: 0;
+ }
+input[type=radio] {
+	margin: 0 .2em 0 .5em;
+}
+.placeholder { color: #aaa; } /* for placeholder polyfill */
+
+.note {
+	color: #999;
+	font-size: 14px;
+	font-style: italic;
+
+}
+.note.header {
+	text-transform: uppercase;
+	color: #333;
+}
+.button,
+a.button,
+input[type=submit] {
+	background: #e6e6e6; /* fallback for non-supporting browsers */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e6e6e6)); /* Safari 4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #fff, #e6e6e6); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #fff, #e6e6e6); /* Firefox 3.6-15 */
+	background-image:      -o-linear-gradient(top, #fff, #e6e6e6); /* Opera 11.10-12.00 */
+	background-image:         linear-gradient(to bottom, #fff, #e6e6e6); /* Firefox 16+, IE10, Opera 12.50+ */
+	color: #333;
+	padding: 8px 12px;
+	border-radius: 5px;
+	border: 1px solid #BBB;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.button:hover {
+	background: #e6e6e6;
+	background-position: 0 -15px;
+	color: #333;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	text-decoration: none;
+}
